@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/iv9epduh6accw2hx?svg=true)](https://ci.appveyor.com/project/Vugar350/transfer)git

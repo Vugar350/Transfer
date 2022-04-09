@@ -16,7 +16,14 @@ public class DashboardPage {
     public void Dashboard() {
     }
 
-    public int getCardBalance() {
+    public CartPage selectCardToTransfer(String id) {
+        $$(".list__item div")
+                .findBy(Condition.attribute("data-test-id", id)).getText();
+        $("data-test-id=action-deposit").click();
+        return new CartPage();
+    }
+
+    public int getCardBalance(String id) {
         val text =$$(".list__item div")
                 .findBy(Condition.attribute("data-test-id", id)).getText();
         return extractBalance(text);
@@ -28,4 +35,5 @@ public class DashboardPage {
         val value = text.substring(start + balanceStart.length(), finish);
         return Integer.parseInt(value);
     }
+
 }

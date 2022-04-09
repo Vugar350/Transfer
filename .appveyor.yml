@@ -10,7 +10,7 @@ build: off  # для использования своего скрипта сб
 
 install:
   # запуск SUT (& означает, что в фоновом режиме - не блокируется терминал для запуска тестов)
-  - java -jar ./artifacts/app-ibank.jar -P:profile=test &
+  - java -jar ./artifacts/app-ibank-build-for-testers.jar -P:profile=test &
 
 build_script:
   - chmod +x gradlew #  предоставление прав на запуск файла gradlew
